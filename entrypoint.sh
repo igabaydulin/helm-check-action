@@ -13,6 +13,7 @@ function printStepExecutionDelimeter {
 }
 
 function displayInfo {
+  echo
   printDelimeter
   echo
   HELM_CHECK_VERSION="v0.1.0"
