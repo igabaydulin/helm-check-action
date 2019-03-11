@@ -1,18 +1,29 @@
-## Description [![Version](https://img.shields.io/badge/version-0.1.4-color.svg)](https://github.com/igabaydulin/helm-check-action/releases/tag/0.1.4)
+# Description [![Version](https://img.shields.io/badge/version-0.1.4-color.svg)](https://github.com/igabaydulin/helm-check-action/releases/tag/0.1.4)
 
 helm-check is a [github action](https://github.com/features/actions) tool which allows to prevalidate helm chart
 template before its deployment; executes [helm lint](https://helm.sh/docs/helm/#helm-lint) and [helm template](https://helm.sh/docs/helm/#helm-template)
 commands
 
-# Environment variables
+## Table of Contents
+* [Components](#components)
+* [Environment Variables](#environment-variables)
+* [Sample](#sample)
+* [Output Example](#output-example)
+* [Testing](#testing)
+
+## Components
+* `Dockerfile`: contains docker image configuration
+* `entrypoint.sh`: contains executable script for helm templates validation
+
+## Environment variables
 * `CHART_LOCATION`: chart folder; required field for `helm lint` and `helm template` executions
 * `CHART_VALUES`: custom values file for specific kubernetes environment; required field for `helm template` execution
 
-# Sample
+## Sample
 [helm-check-action-sample](https://github.com/igabaydulin/helm-check-action-sample) is a sample which uses this action
 in its workflow
 
-# Output example
+## Output example
 [Output](https://github.com/igabaydulin/helm-check-action-sample/runs/75704141) example in [helm-check-action-sample](https://github.com/igabaydulin/helm-check-action-sample):
 ```
 ----------------------------------------------------------------------
@@ -119,3 +130,20 @@ Examination is completed; no errors found!
 
 ### SUCCEEDED helm-check 22:36:42Z (10.512s)
 ```
+
+## Testing
+You can test script locally, but make sure you have all needed tools (helm at least); next steps describe how 
+to test action on Linux system:
+
+1. Clone action repository
+1. Make sure entrypoint.sh is executable, otherwise execute next command in terminal:
+
+    ```
+    igabaydulin@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
+    ```
+1. Move to your repository and execute next command in terminal:
+
+    ```
+    igabaydulin@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
+    ```
+
