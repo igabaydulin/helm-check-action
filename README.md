@@ -137,11 +137,13 @@ to test action on Linux system:
 
 1. Clone action repository
 1. Make sure entrypoint.sh is executable, otherwise execute next command in terminal:
-  ```
-  igabaydulin@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
-  ```
+
+    ```
+    igabaydulin@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
+    ```
 1. Move to your repository and execute next command in terminal:
-  ```
-  igabaydulin@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
-  ```
+
+    ```
+    igabaydulin@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
+    ```
 
