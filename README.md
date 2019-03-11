@@ -140,7 +140,6 @@ to test action on Linux system:
   ```
   igabaydulin@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
   ```
-
 1. Move to your repository and execute next command in terminal:
   ```
   igabaydulin@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
