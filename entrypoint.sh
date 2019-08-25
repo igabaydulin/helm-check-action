@@ -62,7 +62,7 @@ function helmTemplate {
       return $HELM_TEMPLATE_EXIT_CODE
     else
       printStepExecutionDelimeter
-      echo "Skipped due to condition: \$CHART_VALUES is not provided"
+      echo "Skipped due to condition: values are not provided"
       printStepExecutionDelimeter
     fi
   else
