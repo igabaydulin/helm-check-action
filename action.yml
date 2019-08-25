@@ -1,0 +1,18 @@
+name: 'Helm Check Action'
+description: 'GitHub Action to validate your helm charts'
+author: 'Igor Gabaydulin'
+inputs: 
+  chartFolder:
+    description: 'Chart.yml file location'
+    default: '.'
+  chartValues:
+    description: 'Chart values you want to validate'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.chartFolder }}
+    - ${{ inputs.chartValues }}
+branding:
+  icon: 'anchor'
+  color: 'blue'
