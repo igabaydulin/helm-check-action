@@ -1,4 +1,4 @@
-FROM alpine/helm
+FROM alpine/helm:2.16.0
 
 LABEL version="0.1.4"
 LABEL repository="https://github.com/igabaydulin/helm-check-action"
