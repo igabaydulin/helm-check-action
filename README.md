@@ -1,4 +1,4 @@
-# Description [![Version](https://img.shields.io/badge/version-0.1.4-color.svg)](https://github.com/igabaydulin/helm-check-action/releases/tag/0.1.4)
+# Description [![Version](https://img.shields.io/badge/version-0.1.5-color.svg)](https://github.com/igabaydulin/helm-check-action/releases/tag/0.1.5)
 
 helm-check is a [github action](https://github.com/features/actions) tool which allows to prevalidate helm chart
 template before its deployment; executes [helm lint](https://helm.sh/docs/helm/#helm-lint) and [helm template](https://helm.sh/docs/helm/#helm-template)
