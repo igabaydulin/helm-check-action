@@ -37,9 +37,9 @@ function helmLint {
     echo "helm lint $CHART_LOCATION"
     helm lint "$CHART_LOCATION"
   else
-    echo "Custom values detected: \$CHART_VALUES provided"
-    echo "helm lint $CHART_LOCATION -f $CHART_VALUES"
-    helm lint "$CHART_LOCATION" -f "$CHART_VALUES"
+    echo "Custom values detected..."
+    echo "helm lint $CHART_LOCATION --values $CHART_VALUES"
+    helm lint "$CHART_LOCATION" --values "$CHART_VALUES"
   fi
   HELM_LINT_EXIT_CODE=$?
   printStepExecutionDelimeter
