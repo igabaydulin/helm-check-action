@@ -1,4 +1,4 @@
-# Description [![Version](https://img.shields.io/badge/version-0.2.0-color.svg)](https://github.com/igabaydulin/helm-check-action/releases/tag/0.2.0)
+# Description [![Version](https://img.shields.io/badge/version-0.2.0-color.svg)](https://github.com/hopisaurus/helm-check-action/releases/tag/0.2.0)
 
 helm-check is a [github action](https://github.com/features/actions) tool which allows to prevalidate helm chart
 template before its deployment; executes [helm lint](https://helm.sh/docs/helm/#helm-lint) and [helm template](https://helm.sh/docs/helm/#helm-template)
@@ -20,16 +20,16 @@ commands
 * `CHART_VALUES`: custom values file for specific kubernetes environment; required field for `helm template` execution; optional field for `helm lint`
 
 ## Sample
-[helm-check-action-sample](https://github.com/igabaydulin/helm-check-action-sample) is a sample which uses this action
+[helm-check-action-sample](https://github.com/hopisaurus/helm-check-action-sample) is a sample which uses this action
 in its workflow
 
 ## Output example
-[Output](https://github.com/igabaydulin/helm-check-action-sample/runs/75704141) example in [helm-check-action-sample](https://github.com/igabaydulin/helm-check-action-sample):
+[Output](https://github.com/hopisaurus/helm-check-action-sample/runs/75704141) example in [helm-check-action-sample](https://github.com/hopisaurus/helm-check-action-sample):
 ```
 ----------------------------------------------------------------------
 
 Helm-Check v0.2.0
-Source code: https://github.com/igabaydulin/helm-check-action
+Source code: https://github.com/hopisaurus/helm-check-action
 
 ----------------------------------------------------------------------
 
@@ -139,11 +139,11 @@ to test action on Linux system:
 1. Make sure entrypoint.sh is executable, otherwise execute next command in terminal:
 
     ```
-    igabaydulin@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
+    hopisaurus@localhost:~/dev/helm-check-action$ chmod +x ./entrypoint.sh
     ```
 1. Move to your repository and execute next command in terminal:
 
     ```
-    igabaydulin@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
+    hopisaurus@localhost:~/dev/my-local-repository$ CHART_LOCATION=/path/to/chart CHART_VALUES=/path/to/values/values.yaml /path/to/entrypoint.sh
     ```
 

@@ -13,14 +13,14 @@ First off, thank you for taking the time to contribute! :hearts: :+1: :tada:
 
 This project is governed by the [Code of Conduct](CODE_OF_CONDUCT.md).
 By participating you are expected to uphold this code.
-Please report unacceptable behavior to igabaydulin@gmail.com.
+Please report unacceptable behavior to me@hopisaurus.com.
 
 ### How to Contribute
 
 #### Discuss
 
 If you suspect an issue, perform a search in the
-[GitHub issue tracker](https://github.com/igabaydulin/helm-check-action/issues), using a few different keywords.
+[GitHub issue tracker](https://github.com/hopisaurus/helm-check-action/issues), using a few different keywords.
 When you find related issues and discussions, prior or current, it helps you to learn and
 it helps us to make a decision.
 
