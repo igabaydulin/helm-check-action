@@ -1,0 +1,17 @@
+name: 'Helm Check Action'
+description: 'Run Helm Lint and Helm template to check Helm files'
+inputs:
+  chart-values:
+    description: 'Path to the values.yaml'
+    required: false
+    default: '.'
+  chart-location:
+    description: 'Path to the Chart.yaml' 
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.chart-values }}
+    - ${{ inputs.chart-location}}
