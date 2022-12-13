@@ -33,11 +33,11 @@ function helmLint {
   fi
   printStepExecutionDelimeter
   if [ -z "$CHART_VALUES" ];then
-    echo "Using stock values.yaml if exists\n"
+    echo -e "Using stock values.yaml if exists\n"
     echo "helm lint $CHART_LOCATION"
     helm lint "$CHART_LOCATION"
   else
-    echo "Custom values detected..."
+    echo -e "Custom values detected...\n"
     echo "helm lint $CHART_LOCATION --values $CHART_VALUES"
     helm lint "$CHART_LOCATION" --values "$CHART_VALUES"
   fi
