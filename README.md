@@ -1,4 +1,4 @@
-# Description [![Version](https://img.shields.io/badge/version-0.2.0-color.svg)](https://github.com/hopisaurus/helm-check-action/releases/tag/0.2.0)
+# Description [![Version](https://img.shields.io/badge/version-0.1.0-color.svg)](https://github.com/hopisaurus/helm-check-action/releases/tag/0.1.0)
 
 helm-check is a [github action](https://github.com/features/actions) tool which allows to prevalidate helm chart
 template before its deployment; executes [helm lint](https://helm.sh/docs/helm/#helm-lint) and [helm template](https://helm.sh/docs/helm/#helm-template)
@@ -28,7 +28,7 @@ in its workflow
 ```
 ----------------------------------------------------------------------
 
-Helm-Check v0.2.0
+Helm-Check v0.1.0
 Source code: https://github.com/hopisaurus/helm-check-action
 
 ----------------------------------------------------------------------
