@@ -17,7 +17,7 @@ commands
 
 ## Environment variables
 * `CHART_LOCATION`: chart folder; required field for `helm lint` and `helm template` executions
-* `CHART_VALUES`: custom values file for specific kubernetes environment; required field for `helm template` execution
+* `CHART_VALUES`: custom values file for specific kubernetes environment; required field for `helm template` execution; optional field for `helm lint`
 
 ## Sample
 [helm-check-action-sample](https://github.com/igabaydulin/helm-check-action-sample) is a sample which uses this action

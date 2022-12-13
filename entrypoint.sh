@@ -31,9 +31,16 @@ function helmLint {
     echo "Skipped due to condition: \$CHART_LOCATION is not provided"
     return -1
   fi
-  echo "helm lint $CHART_LOCATION"
   printStepExecutionDelimeter
-  helm lint "$CHART_LOCATION"
+  if [ -z "$CHART_VALUES" ];then
+    echo "Using stock values.yaml if exists\n"
+    echo "helm lint $CHART_LOCATION"
+    helm lint "$CHART_LOCATION"
+  else
+    echo "Custom values detected: \$CHART_VALUES provided"
+    echo "helm lint $CHART_LOCATION -f $CHART_VALUES"
+    helm lint "$CHART_LOCATION" -f "$CHART_VALUES"
+  fi
   HELM_LINT_EXIT_CODE=$?
   printStepExecutionDelimeter
   if [ $HELM_LINT_EXIT_CODE -eq 0 ]; then
